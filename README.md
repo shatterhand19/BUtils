@@ -8,5 +8,7 @@ Currently implemented features:
     - Buttons - creating a row/column of buttons
     - Layouts - setting different layouts
     - Tables - creating tables with different properties
+- Collections : provides methods that make using the java Collections easier
+    - Map - functions for putting arrays/lists of keys and values in a map
 
 
