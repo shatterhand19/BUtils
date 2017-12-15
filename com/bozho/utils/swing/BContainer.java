@@ -39,7 +39,7 @@ public class BContainer<T extends Container> {
         return this;
     }
 
-    public BContainer<T> addMargin(Component component) {
+    public BContainer<T> addWithMargin(Component component) {
         container.add(component);
         this.addMargin();
         return this;
