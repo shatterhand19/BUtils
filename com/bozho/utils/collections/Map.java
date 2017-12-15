@@ -18,9 +18,7 @@ public class Map {
      * @param <V> is the type of the values
      */
     public static <K, V> void putKeysDefault(java.util.Map<K, V> map, K[] keys, V defaultValue) {
-        for (int i = 0; i < keys.length; i++) {
-            map.put(keys[i], defaultValue);
-        }
+        for (K key : keys) map.put(key, defaultValue);
     }
 
     /**
@@ -37,9 +35,8 @@ public class Map {
      */
     public static <K, V> void putKeysValues(java.util.Map<K, V> map, K[] keys, V[] values) {
         if (keys.length != values.length) throw new IllegalArgumentException("The keys and the values arrays have different sizes");
-        for (int i = 0; i < keys.length; i++) {
-            map.put(keys[i], values[i]);
-        }
+
+        for (int i = 0; i < keys.length; i++) map.put(keys[i], values[i]);
     }
 
     /**
@@ -52,9 +49,7 @@ public class Map {
      * @param <V> is the type of the values
      */
     public static <K, V> void putKeysDefault(java.util.Map<K, V> map, List<K> keys, V defaultValue) {
-        for (int i = 0; i < keys.size(); i++) {
-            map.put(keys.get(i), defaultValue);
-        }
+        for (K key : keys) map.put(key, defaultValue);
     }
 
     /**
@@ -71,8 +66,7 @@ public class Map {
      */
     public static <K, V> void putKeysDefault(java.util.Map<K, V> map, List<K> keys, List<V> values) {
         if (keys.size() != values.size()) throw new IllegalArgumentException("The keys and the values lists have different sizes");
-        for (int i = 0; i < keys.size(); i++) {
-            map.put(keys.get(i), values.get(i));
-        }
+
+        for (int i = 0; i < keys.size(); i++) map.put(keys.get(i), values.get(i));
     }
 }
